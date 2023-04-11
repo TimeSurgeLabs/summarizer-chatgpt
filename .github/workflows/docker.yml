@@ -1,0 +1,20 @@
+name: Publish Docker
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: login to GitHub Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: docker.io
+          username: chand1012
+          password: ${{ secrets.DOCKER_HUB }}
+      - name: Build Image
+        run: |
+          docker build -t chand1012/summarizer-chatgpt:latest .
+          docker push chand1012/summarizer-chatgpt:latest
