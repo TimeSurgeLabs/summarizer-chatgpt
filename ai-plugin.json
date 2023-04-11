@@ -1,0 +1,20 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Summarizer for YouTube",
+  "name_for_model": "summmarizer",
+  "description_for_human": "Summarizes YouTube Videos.",
+  "description_for_model": "Plugin for summarizing YouTube video transcripts.",
+  "auth": {
+    "type": "service_http",
+    "authorization_type": "bearer",
+    "verification_tokens": { "openai": "09dec99ff9c94068a540cde5411f764e" }
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://chatgpt.summarize.cc/openapi.yaml",
+    "is_user_authenticated": false
+  },
+  "logo_url": "https://summarize.cc/android-chrome-512x512.png",
+  "contact_email": "chandler@timesurgelabs.com",
+  "legal_info_url": "http://www.example.com/legal"
+}
