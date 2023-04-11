@@ -69,7 +69,7 @@ app.middleware('http')(token_middleware)
 @app.get('/')
 async def root():
     '''Test endpoint'''
-    return {"message": "Hello World"}
+    return RedirectResponse('https://summarize.cc', status_code=302)
 
 
 @app.get("/transcript/{videoId}", response_model=TranscriptResponse)
